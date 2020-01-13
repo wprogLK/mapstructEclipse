@@ -19,11 +19,3 @@ dependencies {
     annotationProcessor "org.mapstruct:mapstruct-processor:1.3.0.Final" //Must be defined before the lombok annotationProcessor
     annotationProcessor 'org.projectlombok:lombok:1.18.6'
 }
-
-configurations {
-  apt
-}
-
-tasks.withType(JavaCompile) {
-  options.annotationProcessorPath = configurations.apt
-}
